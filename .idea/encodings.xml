@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/AddCart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Identity-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Identity-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Inventory-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Order-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Seller_Service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/address-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/address-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customer-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/discovery-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
