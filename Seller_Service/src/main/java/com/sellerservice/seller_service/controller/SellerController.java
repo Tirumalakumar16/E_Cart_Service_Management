@@ -6,6 +6,7 @@ import com.inventory.inventory.dtos.ResponseInventoryDto;
 import com.inventory.inventory.dtos.UpdateRequest;
 import com.inventory.inventory.exceptions.ProductsStockNotAvailableInInInventory;
 import com.inventory.inventory.exceptions.SellerNotAvailable;
+import com.ktkapp.addressservice.dtos.DeleteAddressRequest;
 import com.ktkapp.addressservice.dtos.RequestAddressDto;
 import com.ktkapp.addressservice.exceptions.AddressNotFoundWithEmail;
 import com.sellerservice.seller_service.dtos.*;
@@ -78,6 +79,12 @@ public class SellerController {
     public ResponseAddressSellerDto getAllAddressesByEmail(@RequestHeader("LoggedInUser") String userName) throws AddressNotFoundWithEmail, SellerNotPresentException {
 
         return sellerService.getAllAddressesByEmail(userName);
+    }
+
+    @DeleteMapping("/seller/address")
+    public String deleteAddress(@RequestBody DeleteAddressRequest deleteAddressRequest,@RequestHeader("LoggedInUser") String userName) {
+
+        return sellerService.deleteAddress(deleteAddressRequest,userName);
     }
 
 

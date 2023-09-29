@@ -7,6 +7,7 @@ import com.inventory.inventory.dtos.ResponseInventoryDto;
 import com.inventory.inventory.dtos.UpdateRequest;
 import com.inventory.inventory.exceptions.ProductsStockNotAvailableInInInventory;
 import com.inventory.inventory.exceptions.SellerNotAvailable;
+import com.ktkapp.addressservice.dtos.DeleteAddressRequest;
 import com.ktkapp.addressservice.dtos.EmailAddressRequest;
 import com.ktkapp.addressservice.dtos.RequestAddressDto;
 import com.ktkapp.addressservice.dtos.ResponseAddressDto;
@@ -197,6 +198,25 @@ public class SellerServiceImpl implements SellerService{
         return responseAddressSellerDto;
 
     }
+
+
+    @Override
+    public String deleteAddress(DeleteAddressRequest deleteAddressRequest, String userName) {
+        IdentityResponseDto identityResponseDto = identityFeignClient.getUserCredentials(userName);
+        EmailAddressRequest emailAddressRequest = new EmailAddressRequest();
+        emailAddressRequest.setEmailId(identityResponseDto.getEmailId());
+
+        deleteAddressRequest.setEmailAddressRequest(emailAddressRequest);
+
+        return addressFeignClient.deleteAddress(deleteAddressRequest);
+
+    }
+
+
+
+
+
+
 
     @Override
     public SellerResponseDto getSellerByEmail(String emailId) throws SellerNotPresentException {
