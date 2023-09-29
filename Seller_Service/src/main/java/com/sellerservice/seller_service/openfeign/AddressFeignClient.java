@@ -1,6 +1,7 @@
 package com.sellerservice.seller_service.openfeign;
 
 import com.identityservice.dtos.IdentityResponseDto;
+import com.ktkapp.addressservice.dtos.DeleteAddressRequest;
 import com.ktkapp.addressservice.dtos.EmailAddressRequest;
 import com.ktkapp.addressservice.dtos.RequestAddressDto;
 import com.ktkapp.addressservice.dtos.ResponseAddressDto;
@@ -14,6 +15,11 @@ import java.util.List;
 public interface AddressFeignClient {
     @PostMapping("/address")
     public ResponseAddressDto saveAddress(@RequestBody RequestAddressDto requestAddressDto);
+
+
+    @DeleteMapping("/address")
+    public String deleteAddress(@RequestBody DeleteAddressRequest deleteAddress);
+
 
     @GetMapping("/addresses/{email}")
     public List<ResponseAddressDto> getAddresses(@PathVariable("email")String emailId) throws AddressNotFoundWithEmail;
